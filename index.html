@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reloge — Ton logement, près de ton campus</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F5C518',
+            dark:    '#1C1C1E',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Phone frame CSS pour app-screen-1 qui n'a pas de cadre natif */
+    .phone-frame {
+      background: #f0f0f0;
+      border-radius: 40px;
+      padding: 14px 10px;
+      box-shadow: 0 0 0 2px #d0d0d0, 0 20px 60px rgba(0,0,0,0.15);
+    }
+    .phone-frame img {
+      border-radius: 28px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="text-gray-900 bg-white">
+
+  <!-- ================================================
+       NAVBAR
+  ================================================ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#"><img src="reloge-logo-top.png" alt="Reloge" class="h-7" /></a>
+
+      <div class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
+        <a href="#fonctionnalites" class="hover:text-gray-900 transition-colors">Fonctionnalité</a>
+        <a href="#partenaires"     class="hover:text-gray-900 transition-colors">Partenaires</a>
+        <a href="#temoignages"     class="hover:text-gray-900 transition-colors">Témoignages</a>
+      </div>
+
+      <a href="#telechargement"
+         class="bg-primary text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:brightness-95 transition">
+        Télécharger l'app
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="pt-16 min-h-screen flex items-center bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 w-full py-20">
+      <div class="flex items-center gap-14">
+
+        <!-- Texte gauche -->
+        <div class="flex-1 max-w-[520px]">
+          <h1 class="text-5xl font-extrabold leading-[1.1] text-gray-900 mb-6">
+            Ton logement,<br />
+            près de<br />
+            ton campus&nbsp;!
+          </h1>
+          <p class="text-gray-500 text-lg leading-relaxed mb-10">
+            Trouve ton logement étudiant sûr et abordable, à deux pas de ton université.
+            Simple, rapide, directement depuis ton téléphone.
+          </p>
+          <div class="flex gap-4 flex-wrap">
+            <a href="#telechargement"
+               class="bg-primary text-black font-semibold px-7 py-3.5 rounded-full hover:brightness-95 transition text-sm">
+              Télécharger l'app
+            </a>
+            <a href="#fonctionnalites"
+               class="border border-gray-300 text-gray-700 font-semibold px-7 py-3.5 rounded-full hover:border-gray-500 transition text-sm">
+              En savoir plus
+            </a>
+          </div>
+        </div>
+
+        <!-- Image droite -->
+        <div class="flex-1 flex justify-end">
+          <div class="rounded-3xl overflow-hidden w-full max-w-[440px] shadow-lg">
+            <img src="hero-img.png" alt="Étudiante Reloge" class="w-full object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       PARTENAIRES
+  ================================================ -->
+  <section id="partenaires" class="py-14 border-y border-gray-100 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">
+        Ils nous font confiance
+      </p>
+      <div class="flex items-center justify-center gap-20 flex-wrap">
+        <img src="MTN-logo.png"       alt="MTN"        class="h-10 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="seme-city-logo.png" alt="Sème City"  class="h-10 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION PROBLÈME
+  ================================================ -->
+  <section class="py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center gap-16 flex-wrap">
+
+        <!-- Texte -->
+        <div class="flex-1 min-w-[280px]">
+          <h2 class="text-4xl font-bold leading-tight text-gray-900 mb-6">
+            Trouver un logement étudiant<br />
+            au Bénin, c'est souvent très<br />
+            compliqué et risqué.
+          </h2>
+          <p class="text-gray-500 text-base leading-relaxed mb-4">
+            À chaque rentrée universitaire, des milliers d'étudiants passent des semaines
+            à chercher un logement proche de leur campus, sans aucune garantie de fiabilité
+            ou de sécurité.
+          </p>
+          <p class="text-gray-500 text-base leading-relaxed">
+            Loin de chez eux, exposés aux arnaques, sans moyen de visiter ou de vérifier
+            avant de s'engager.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="flex-1 min-w-[280px]">
+          <img src="problem-section-img.png"
+               alt="Étudiants cherchant un logement"
+               class="w-full rounded-2xl object-cover shadow-sm" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       RELOGE CHANGE ÇA — App screenshots
+  ================================================ -->
+  <section id="fonctionnalites" class="py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-5">Reloge change ça&nbsp;!</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+          La fonctionnalité principale de Reloge, c'est la recherche de logement — rapide,
+          fiable et directement depuis ton téléphone, à des kilomètres de ton futur campus.
+        </p>
+      </div>
+
+      <!-- Trois screenshots téléphones -->
+      <div class="flex items-end justify-center gap-6">
+
+        <!-- Screen 1 — avec cadre CSS car pas de frame natif -->
+        <div class="flex-1 max-w-[220px] pb-8">
+          <div class="phone-frame">
+            <img src="app-screen-1.png" alt="Recherche logement" />
+          </div>
+        </div>
+
+        <!-- Screen 2 — a son propre cadre blanc, légèrement surélevé -->
+        <div class="flex-1 max-w-[240px]">
+          <img src="app-screen-2.png"
+               alt="Résultats de recherche"
+               class="w-full drop-shadow-2xl" />
+        </div>
+
+        <!-- Screen 3 — iPhone frame natif -->
+        <div class="flex-1 max-w-[220px] pb-8">
+          <img src="app-screen-3.png"
+               alt="Détail du logement"
+               class="w-full drop-shadow-2xl" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       POURQUOI RELOGE ?
+  ================================================ -->
+  <section class="py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900">Pourquoi&nbsp;?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-5">
+            <i class="fa-solid fa-magnifying-glass text-black text-base"></i>
+          </div>
+          <h3 class="font-bold text-base mb-2">Recherche par campus</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Filtre les logements disponibles autour de ton université en quelques secondes.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-5">
+            <i class="fa-solid fa-shield-halved text-black text-base"></i>
+          </div>
+          <h3 class="font-bold text-base mb-2">Logements vérifiés</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Chaque propriétaire et logement est contrôlé avant d'être publié sur la plateforme.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-5">
+            <i class="fa-solid fa-wallet text-black text-base"></i>
+          </div>
+          <h3 class="font-bold text-base mb-2">Budget adapté</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Renseigne ton budget et trouve les logements correspondant exactement à tes moyens.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-5">
+            <i class="fa-solid fa-calendar-check text-black text-base"></i>
+          </div>
+          <h3 class="font-bold text-base mb-2">Réservation directe</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Réserve ton logement en quelques clics, sans intermédiaire.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-5">
+            <i class="fa-solid fa-comments text-black text-base"></i>
+          </div>
+          <h3 class="font-bold text-base mb-2">Messagerie intégrée</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Échange directement avec le propriétaire avant de confirmer ta réservation.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-5">
+            <i class="fa-solid fa-star text-black text-base"></i>
+          </div>
+          <h3 class="font-bold text-base mb-2">Avis &amp; évaluations</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Consulte les avis d'autres étudiants pour faire le meilleur choix.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       TÉMOIGNAGES
+  ================================================ -->
+  <section id="temoignages" class="py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-20">
+        <h2 class="text-3xl font-bold text-gray-900">Ce qu'en pensent nos clients</h2>
+      </div>
+
+      <!-- Témoignage 1 — image gauche -->
+      <div class="flex items-center gap-16 mb-20 flex-wrap">
+        <div class="w-64 flex-shrink-0">
+          <img src="testimony-1.png" alt="Aminata" class="w-full rounded-2xl object-cover" />
+        </div>
+        <div class="flex-1 min-w-[260px]">
+          <p class="text-gray-700 text-xl leading-relaxed italic mb-6">
+            "Grâce à Reloge, j'ai trouvé mon appartement à Abomey-Calavi en moins d'une semaine.
+            Le propriétaire était sérieux et le logement exactement comme décrit."
+          </p>
+          <p class="font-bold text-base">Aminata D.</p>
+          <p class="text-gray-400 text-sm">Étudiante, Université d'Abomey-Calavi</p>
+        </div>
+      </div>
+
+      <!-- Témoignage 2 — image droite -->
+      <div class="flex items-center gap-16 mb-20 flex-row-reverse flex-wrap">
+        <div class="w-64 flex-shrink-0">
+          <img src="testimony-2.png" alt="M. Kouassi" class="w-full rounded-2xl object-cover" />
+        </div>
+        <div class="flex-1 min-w-[260px] text-right">
+          <p class="text-gray-700 text-xl leading-relaxed italic mb-6">
+            "J'ai mis mon logement sur Reloge et j'ai trouvé un locataire étudiant sérieux
+            en quelques jours. La plateforme est simple, efficace et bien pensée."
+          </p>
+          <p class="font-bold text-base">M. Kouassi</p>
+          <p class="text-gray-400 text-sm">Propriétaire, Cotonou</p>
+        </div>
+      </div>
+
+      <!-- Témoignage 3 — image gauche -->
+      <div class="flex items-center gap-16 mb-20 flex-wrap">
+        <div class="w-64 flex-shrink-0">
+          <img src="testimony-3.png" alt="Fatoumata" class="w-full rounded-2xl object-cover" />
+        </div>
+        <div class="flex-1 min-w-[260px]">
+          <p class="text-gray-700 text-xl leading-relaxed italic mb-6">
+            "Je venais de loin et j'avais vraiment peur de me faire arnaquer. Reloge m'a rassurée
+            avec ses logements vérifiés. Je recommande à tous les étudiants !"
+          </p>
+          <p class="font-bold text-base">Fatoumata K.</p>
+          <p class="text-gray-400 text-sm">Étudiante, EPAC</p>
+        </div>
+      </div>
+
+      <!-- Témoignage 4 — image droite -->
+      <div class="flex items-center gap-16 flex-row-reverse flex-wrap">
+        <div class="w-64 flex-shrink-0">
+          <img src="testimony-4.png" alt="Kofi" class="w-full rounded-2xl object-cover" />
+        </div>
+        <div class="flex-1 min-w-[260px] text-right">
+          <p class="text-gray-700 text-xl leading-relaxed italic mb-6">
+            "L'application est vraiment intuitive. En 10 minutes, j'avais plusieurs options
+            proches de mon école. C'est exactement ce qu'il nous fallait pour la rentrée."
+          </p>
+          <p class="font-bold text-base">Kofi M.</p>
+          <p class="text-gray-400 text-sm">Étudiant, IFRI</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       TÉLÉCHARGEMENT CTA
+  ================================================ -->
+  <section id="telechargement" class="py-24 bg-primary">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-black mb-4">Disponible sur Android et iOS</h2>
+      <p class="text-black/60 text-lg mb-12">
+        Télécharge l'application et commence ta recherche dès maintenant.
+      </p>
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+
+        <!-- App Store -->
+        <a href="#"
+           class="bg-black text-white flex items-center gap-3 px-6 py-4 rounded-2xl hover:bg-gray-900 transition">
+          <i class="fa-brands fa-apple text-3xl"></i>
+          <div class="text-left">
+            <p class="text-xs text-gray-400 leading-none">Télécharger sur</p>
+            <p class="font-semibold text-base leading-tight mt-0.5">App Store</p>
+          </div>
+        </a>
+
+        <!-- Google Play -->
+        <a href="#"
+           class="bg-black text-white flex items-center gap-3 px-6 py-4 rounded-2xl hover:bg-gray-900 transition">
+          <i class="fa-brands fa-google-play text-2xl"></i>
+          <div class="text-left">
+            <p class="text-xs text-gray-400 leading-none">Disponible sur</p>
+            <p class="font-semibold text-base leading-tight mt-0.5">Google Play</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="bg-dark text-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="flex items-start justify-between gap-12 flex-wrap">
+
+        <!-- Logo + tagline -->
+        <div class="flex-1 min-w-[200px]">
+          <img src="reloge-logo-bottom.png" alt="Reloge" class="h-8 mb-4" />
+          <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
+            La plateforme de recherche de logement étudiant au Bénin.
+          </p>
+        </div>
+
+        <!-- Colonnes de liens -->
+        <div class="flex gap-16 flex-wrap">
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Navigation</h4>
+            <ul class="space-y-3 text-sm text-gray-500">
+              <li><a href="#fonctionnalites" class="hover:text-white transition">Fonctionnalité</a></li>
+              <li><a href="#partenaires"     class="hover:text-white transition">Partenaires</a></li>
+              <li><a href="#temoignages"     class="hover:text-white transition">Témoignages</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Légal</h4>
+            <ul class="space-y-3 text-sm text-gray-500">
+              <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
+              <li><a href="#" class="hover:text-white transition">Confidentialité</a></li>
+              <li><a href="#" class="hover:text-white transition">CGU</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Contact</h4>
+            <ul class="space-y-3 text-sm text-gray-500">
+              <li>contact@reloge.bj</li>
+              <li>+229 XX XX XX XX</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-gray-800 mt-14 pt-8 flex items-center justify-between flex-wrap gap-4">
+        <p class="text-gray-600 text-sm">© 2025 Reloge. Tous droits réservés.</p>
+        <div class="flex gap-5">
+          <a href="#" class="text-gray-600 hover:text-white transition"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a href="#" class="text-gray-600 hover:text-white transition"><i class="fa-brands fa-twitter  text-lg"></i></a>
+          <a href="#" class="text-gray-600 hover:text-white transition"><i class="fa-brands fa-linkedin  text-lg"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
