@@ -145,20 +145,14 @@
 
         <!-- Texte — en premier sur mobile et desktop -->
         <div class="flex-1">
-          <h2 class="text-3xl md:text-4xl font-bold leading-tight text-gray-900 mb-5 md:mb-6">
-            Trouver un logement étudiant
-            au Bénin, c'est souvent très
-            compliqué et risqué.
+          <span class="inline-block bg-primary text-black text-xs font-semibold uppercase tracking-[0.15em] px-4 py-1.5 rounded-full mb-6 md:mb-8">
+            Problème
+          </span>
+          <h2 class="text-xl md:text-2xl font-normal leading-snug text-gray-900">
+            Trouver un logement étudiant au Bénin, c'est encore trop
+            souvent une course à tâtons&nbsp;: bouche-à-oreille,
+            déplacements à vide, prix opaques, arnaques.
           </h2>
-          <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-            À chaque rentrée universitaire, des milliers d'étudiants passent des semaines
-            à chercher un logement proche de leur campus, sans aucune garantie de fiabilité
-            ou de sécurité.
-          </p>
-          <p class="text-gray-500 text-sm md:text-base leading-relaxed">
-            Loin de chez eux, exposés aux arnaques, sans moyen de visiter ou de vérifier
-            avant de s'engager.
-          </p>
         </div>
 
         <!-- Image -->
@@ -174,21 +168,43 @@
 
 
   <!-- ================================================
-       RELOGE CHANGE ÇA — + App screenshots
+       RELOGE CHANGE ÇA — section standalone
   ================================================ -->
-  <section id="fonctionnalites" class="py-16 md:py-28 bg-white">
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-5 md:px-6">
+      <div class="flex items-center justify-center gap-5 md:gap-8">
+
+        <!-- 3 traits gauche — même longueur, compas ouvert vers la droite -->
+        <!-- viewBox élargi pour que la — horizontale ait la même longueur visuelle que les diagonales -->
+        <svg width="77" height="200" viewBox="0 0 96 300" fill="none" class="flex-shrink-0">
+          <line x1="20" y1="4"   x2="76" y2="98"  stroke="#F5C518" stroke-width="7" stroke-linecap="round"/>
+          <line x1="10" y1="150" x2="86" y2="150" stroke="#F5C518" stroke-width="7" stroke-linecap="round"/>
+          <line x1="20" y1="296" x2="76" y2="202" stroke="#F5C518" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 text-center">
+          Reloge change ça&nbsp;!
+        </h2>
+
+        <!-- 3 traits droite — même longueur, compas ouvert vers la gauche -->
+        <svg width="77" height="200" viewBox="0 0 96 300" fill="none" class="flex-shrink-0">
+          <line x1="76" y1="4"   x2="20" y2="98"  stroke="#F5C518" stroke-width="7" stroke-linecap="round"/>
+          <line x1="10" y1="150" x2="86" y2="150" stroke="#F5C518" stroke-width="7" stroke-linecap="round"/>
+          <line x1="76" y1="296" x2="20" y2="202" stroke="#F5C518" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       APP SCREENSHOTS
+  ================================================ -->
+  <section id="fonctionnalites" class="pt-4 pb-16 md:pb-28 bg-white">
     <div class="max-w-6xl mx-auto px-5 md:px-6">
 
       <!-- Heading -->
       <div class="text-center mb-12 md:mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-5">
-          Reloge change ça&nbsp;!
-        </h2>
-        <p class="text-gray-500 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
-          La fonctionnalité principale de Reloge, c'est la recherche de logement — rapide,
-          fiable et directement depuis ton téléphone, à des kilomètres de ton futur campus.
-        </p>
-      </div>
 
       <!-- Screenshots : scroll horizontal sur mobile, row centré sur desktop -->
       <div class="flex gap-4 md:gap-6 overflow-x-auto scroll-snap-x pb-4 md:overflow-visible md:justify-center md:items-end">
