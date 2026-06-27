@@ -15,7 +15,7 @@
             dark:    '#1C1C1E',
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+            sans: ['Bricolage Grotesque', 'sans-serif'],
           },
         },
       },
@@ -24,12 +24,24 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Bricolage Grotesque', sans-serif; }
+
+    /* Séparateurs doux en fondu */
+    .sep-soft {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.07) 25%, rgba(0,0,0,0.07) 75%, transparent 100%);
+      border: none;
+    }
+    .sep-soft-dark {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 75%, transparent 100%);
+      border: none;
+    }
 
     /* Scrollbar invisible pour le carousel mobile */
     .scroll-snap-x {
@@ -56,7 +68,7 @@
   <!-- ================================================
        NAVBAR
   ================================================ -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm" style="box-shadow: 0 1px 0 rgba(0,0,0,0.06);">
     <div class="max-w-6xl mx-auto px-5 md:px-6 h-16 flex items-center justify-between">
 
       <a href="#"><img src="reloge-logo-top.png" alt="Reloge" class="h-6 md:h-7" /></a>
@@ -123,7 +135,7 @@
   <!-- ================================================
        PARTENAIRES
   ================================================ -->
-  <section id="partenaires" class="py-10 md:py-14 border-y border-gray-100 bg-white">
+  <section id="partenaires" class="py-10 md:py-14 bg-white" style="border-top: 1px solid transparent; border-bottom: 1px solid transparent; background-image: linear-gradient(white,white), linear-gradient(white,white); background-clip: padding-box; box-shadow: 0 -1px 0 rgba(0,0,0,0.06), 0 1px 0 rgba(0,0,0,0.06);">
     <div class="max-w-6xl mx-auto px-5 md:px-6 text-center">
       <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6 md:mb-8">
         Ils nous soutiennent
@@ -537,7 +549,8 @@
       </div>
 
       <!-- Bottom bar -->
-      <div class="border-t border-gray-800 mt-10 md:mt-14 pt-6 md:pt-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div class="sep-soft-dark mt-10 md:mt-14"></div>
+      <div class="pt-6 md:pt-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <p class="text-gray-600 text-sm">© 2025 Reloge. Tous droits réservés.</p>
         <div class="flex gap-5">
           <a href="https://www.instagram.com/reloge_officiel/" target="_blank" rel="noopener" class="text-gray-600 hover:text-white transition"><i class="fa-brands fa-instagram text-lg"></i></a>
